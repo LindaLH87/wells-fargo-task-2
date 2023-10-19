@@ -5,6 +5,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Client {
@@ -13,7 +15,7 @@ public class Client {
     @GeneratedValue()
     private long clientId;
 
-    @Column(nullable = false)
+    @ManyToOne
     private Advisor advisor;
 
     @Column(nullable = false)

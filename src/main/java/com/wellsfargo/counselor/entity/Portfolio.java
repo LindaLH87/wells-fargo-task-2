@@ -5,6 +5,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Portfolio {
@@ -13,7 +14,7 @@ public class Portfolio {
     @GeneratedValue()
     private long portfolioId;
 
-    @Column(nullable = false)
+    @ManyToOne
     private Client client;
 
     @Column(nullable = false)

@@ -5,6 +5,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import java.util.Date;
 
 @Entity
@@ -14,7 +15,7 @@ public class Security {
     @GeneratedValue()
     private long securityId;
 
-    @Column(nullable = false)
+    @ManyToOne
     private Portfolio portfolio;
 
     @Column(nullable = false)
